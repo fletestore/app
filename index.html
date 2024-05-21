@@ -3,14 +3,21 @@
 <title>Fletestore App</title>
 <link rel="icon" type="image/png" href="https://fletestore.lightdata.app/app-assets/images/favicon/apple-icon-180x180.png" />
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function () {
-            var downloadLink = document.createElement('a');
-            downloadLink.style.display = 'none';
-            document.body.appendChild(downloadLink);
-            downloadLink.href = 'https://fletestore.github.io/app/Fletestore.apk';
-            downloadLink.click();
-        });
-    </script>
+<script>
+$(function() {
+$('a[data-auto-download]').each(function(){
+var $this = $(this);
+setTimeout(function() {
+window.location = $this.attr('href');
+}, 2000);
+});
+});
+</script>
 </head>
+<body>
+<div class="wrapper">
+<p>En breve comenzara la descarga. Si no inicia, cliquea
+<a data-auto-download href="https://fletestore.github.io/app/Fletestore.apk">acá</a>.</p>
+</div>
+</body>
 </html>
