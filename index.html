@@ -1,1 +1,15 @@
-<a href="downloadURL" target="Fletestore.apk" />
+<html>
+<head>
+<title>Fletestore App</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var downloadLink = document.createElement('a');
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.href = 'https://fletestore.github.io/app/Fletestore.apk';
+            downloadLink.click();
+        });
+    </script>
+</head>
+</html>
